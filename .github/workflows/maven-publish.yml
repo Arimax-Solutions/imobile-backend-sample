@@ -21,3 +21,15 @@ jobs:
 
       - name: Build with Maven (Skip Tests)
         run: mvn clean package -DskipTests
+        env:
+          JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SPRING_APPLICATION_NAME: ${{ secrets.SPRING_APPLICATION_NAME }}
+          SPRING_DATASOURCE_DRIVER_CLASS_NAME: ${{ secrets.SPRING_DATASOURCE_DRIVER_CLASS_NAME }}
+          SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
+          SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
+          SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
+          SPRING_JPA_DATABASE: ${{ secrets.SPRING_JPA_DATABASE }}
+          SPRING_JPA_DATABASE_PLATFORM: ${{ secrets.SPRING_JPA_DATABASE_PLATFORM }}
+          SPRING_JPA_GENERATE_DDL: ${{ secrets.SPRING_JPA_GENERATE_DDL }}
+          SPRING_JPA_SHOW_SQL: ${{ secrets.SPRING_JPA_SHOW_SQL }}
