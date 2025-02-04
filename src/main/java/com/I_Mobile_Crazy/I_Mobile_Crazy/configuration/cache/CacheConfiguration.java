@@ -1,5 +1,7 @@
 package com.I_Mobile_Crazy.I_Mobile_Crazy.configuration.cache;
 
+import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
@@ -17,4 +19,5 @@ public class CacheConfiguration {
     public CacheManager cacheManager() {
         return new ConcurrentMapCacheManager("users");
     }
+
 }
